@@ -1,0 +1,642 @@
+/* 
+=============================
+Public Style
+=============================
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: tahoma, Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+/* 
+=============================
+Navbar Style
+=============================
+*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list {
+    flex: 10;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-list li {
+    padding: 20px;
+}
+.nav-list li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.nav-list li a:hover {
+    color: #f50;
+}
+.nav-logo {
+    flex: 3;
+}
+.nav-logo img {
+    height: 50px;
+
+}
+.menu {
+    flex: 1;
+    display: none;
+}
+.menu-item {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    margin: 5px auto;
+}
+@media all and (max-width:900px) {
+    .navbar {
+        flex-direction: column;
+        position: relative;
+    }
+    .nav-list {
+        width: 100%;
+        list-style-type: none;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+    .nav-list li {
+        padding: 10px 0;
+        border-top: 1px solid #aaa;
+        width: 100%;
+        background: rgb(255, 246, 246);
+    }
+    .nav-list li:hover{
+        background: #333;
+    }
+    .nav-list li:hover a{
+        color: #ddd;
+    }
+    .nav-logo {
+        width: 100%;
+    }
+    .menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+    }
+    .active{
+        display: block;
+    }
+}
+/* 
+=============================
+Home Style
+=============================
+*/
+.home {
+    background: url(../images/Home/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    text-align: center ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-title {
+font-size: 50px;
+margin-bottom: 40px;
+color: #333;
+}
+.home-title-secondary {
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: #333;  
+}
+.home-descibtion {
+    font-size: 25px;
+    margin-bottom: 40px;
+    color: #333;  
+}
+.home-button {
+    font-size: 20px;
+    margin-bottom: 40px;
+    background: #f50;
+    color: #fff;  
+    padding: 5px 15px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+.home-button:hover {
+    background: #fff;
+    color: #f50;
+}
+@media all and (max-width:900px) {
+    .home-title {
+        font-size: 40px;
+        color: #fff;
+        }
+    .home-title-secondary {
+        font-size: 25px;
+        color: #fff;
+    }
+    .home-descibtion {
+        font-size: 15px;
+        color: #aaa;
+    }
+}
+@media all and (max-width:370px) {
+    .home-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #fff;
+        }
+    .home-title-secondary {
+        font-size: 18px;
+        color: #f50;
+        margin-bottom: 20px;
+    }
+    .home-descibtion {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #aaa;
+        margin-bottom: 20px;
+    }
+    .home-button {
+        font-size: 16px;
+        margin-bottom: 20px;
+        background: #f50;
+        color: #fff;  
+        padding: 5px 10px;
+    }
+}
+/* 
+=============================
+Work Style
+=============================
+*/
+.work {
+    padding: 80px 0;
+}
+.work-title {
+    font-size: 60px;
+    color: #333;
+    margin: 0 0 50px 100px;
+}
+.work-title span {
+    font-weight: normal;
+}
+.work-content {
+    display: flex;
+    justify-content:space-between;
+}
+.work-item {
+    border: 1px solid #000;
+    text-align: center;
+    flex-basis: 30%;
+}
+.work-item .icon {
+    margin: 50px 0;
+    font-size: 40px;
+    color: #333;
+}
+.work-item-title {
+    margin-bottom: 25px;
+    color: #f50;
+    font-size: 20px;
+}
+.work-item-line {
+    width: 60%;
+    margin: 25px auto;
+    opacity: 0.2;
+}
+.work-item-desc {
+    margin-bottom: 50px;
+    padding: 0 15px;
+}
+@media all and (max-width:500px) {
+    .work-content {
+        display: grid;
+        grid-template-rows: repeat(1,1rf);
+        grid-gap: 10px
+    }
+    .work-title {
+        font-size: 40px;
+        color: #333;
+        text-align: left;
+        padding-bottom: 20px;
+        margin: 0;
+    }
+}
+/* 
+=============================
+portoflio Style
+=============================
+*/
+.portoflio {
+    background: rgb(255, 246, 246);
+    padding-top: 20px;
+}
+.portoflio-title {
+    text-align: center;
+    font-size: 35px;
+}
+.portoflio-title span {
+    font-weight: normal;
+}
+.portoflio-list {
+    width: 40%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.portoflio-list-item {
+    margin: 30px 0;
+}
+.portoflio-list-item a {
+    text-decoration: none;
+    color: #333;
+    padding: 15px;
+}
+.portoflio-image {
+    display: grid;
+    grid-template-columns: repeat(4, max(25%));
+}
+.portoflio-image-item img {
+    width: 100%;
+    height: 100%;
+}
+.portoflio-image-item {
+    position: relative;
+}
+.portoflio-image-item-desc {
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: rgba(253, 84, 0, 0.5);
+    transition: width 1s;
+    visibility: hidden;
+
+}
+.portoflio-image-item:hover .portoflio-image-item-desc{
+    width: 100%;
+    visibility: visible;
+}
+.portoflio-image-item-desc button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%) ;
+    border: 2px solid #f50;
+    width: 150px;
+    height: 50px;
+    background: rgba(253, 84, 0, 0.5);
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+@media all and (max-width:900px) {
+    .portoflio-image {
+        display: grid;
+        grid-template-columns: repeat(2, max(50%));
+    }
+    .portoflio-list {
+        width: 60%;
+    }
+}
+@media all and (max-width:774px){
+    .portoflio-list {
+        width: 80%;
+    }
+}
+@media all and (max-width:540px) {
+    .portoflio-image {
+        display: flex;
+        flex-direction: column;
+    }
+    .portoflio-list {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .portoflio-list-item {
+        display: block;
+        border-bottom: 1px solid #aaa ;
+        margin: 0;
+    }
+    .portoflio-list-item a{
+        display: block;
+        padding:20px 0;
+        cursor: pointer;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .portoflio-list-item:hover {
+        background: rgb(224, 224, 224);
+
+    }
+}
+/* 
+=============================
+Profile Style
+=============================
+*/
+.profile {
+    padding: 30px 0;
+}
+.profile-content {
+    display: flex;
+    justify-content: space-between;
+}
+.profile-my, .profile-skills {
+    flex-basis: 45%;
+}
+.profile-my-title, .profile-skills-title {
+    font-size: 45px;
+    margin-bottom: 30px;
+    color: #333;
+}
+.profile-my-title span, .profile-skills-title span {
+    font-weight: normal;
+}
+.profile-my-content {
+    display:flex;
+    justify-content: space-between;
+}
+.profile-my-info{
+    flex-basis: 20%;
+}
+.profile-my-desc {
+    flex-basis: 80%;
+}
+.profile-my-info, .profile-my-desc {
+    list-style-type: none;
+}
+.profile-my-info li, .profile-my-desc li {
+    margin-bottom: 12px;
+}
+.profile-my-desc .active {
+    color: #f50;
+}
+.profile-skills-explain {
+    margin-bottom: 15px;
+}
+
+.bootstrap-impty, .html-impty, .seo-impty {
+    height: 5px;
+    border: 0.5px solid rgba(224, 224, 224,0.5);
+    margin-bottom: 15px;
+}
+.bootstrap-skill-line, .html-skill-line, .seo-skill-line {
+    height: 5px;
+    background: #f50;  
+}
+.profile-skills .bootstrap-skill-line {
+    width: 100%;
+}
+.profile-skills .html-skill-line {
+    width: 90%;
+}
+.profile-skills .seo-skill-line {
+    width: 80%;
+}
+.bootstrap-container, .html-container, .seo-container {
+    display: flex;
+    justify-content: space-between;
+}
+.bootstrap-presentag, .html-presentag, .seo-presentag {
+    flex-basis: 30%;
+}
+/* 
+=============================
+Media Profile Style
+=============================
+*/
+
+
+@media all and (max-width:840px) {
+    .profile-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media all and (max-width:470px) {
+    .profile-my-title, .profile-skills-title {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .profile-my-content {
+        font-size: 15px;
+    }
+    .profile-skills-explain {
+        font-size: 15px;
+    }
+    .bootstrap-container, .html-container, .seo-container {
+        font-size: 15px;
+    }
+}
+/* 
+=============================
+About Style
+=============================
+*/
+.about {
+    background: url(../images/creative/about-bg.jpg);
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+}
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(2, max(50%));
+}
+.about-full-TOP-title {
+    font-size: 20px;
+    margin: 50px 0 10px 0;
+}
+.about-full-bottom-title {
+    font-size: 35px;
+    color: #f50;
+    margin-bottom: 30px;
+}
+.about-full-desc1 {
+    margin-bottom: 20px;
+}
+.about-full-desc1, .about-full-desc2 {
+    color: rgb(126, 126, 126);
+    line-height: 1.8
+}
+.about-full-TOP-title span, .about-full-bottom-title span {
+    font-weight: normal;
+}
+/* 
+=============================
+Media About Style
+=============================
+*/
+@media all and (max-width:470px) {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .about {
+        background-size:100% 100%;
+    }
+    .about-full-desc1 {
+        margin-bottom: 10px;
+    }
+    .about-full-desc1, .about-full-desc2 {
+        color: rgb(126, 126, 126);
+        line-height: 1;
+        font-size: 15px;
+    }
+}
+/* 
+=============================
+Social Style
+=============================
+*/
+.social-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.social-item {
+    display: flex;
+    justify-items: center;
+    padding:60px 20px ;
+}
+.social-content .facebook {
+    background: rgb(42, 42, 255);
+}
+.social-content .twitter {
+    background: rgb(94, 94, 230);
+}
+.social-content .pinterest {
+    background: rgb(255, 38, 38);
+}
+
+.facetitle, .twittitle, .pinttitle {
+    margin-left:20px ;
+}
+.social-logo {
+    width: 50px;
+    height:50px;
+    border: 1px solid #333;
+    text-align: center;
+    background: #fff;
+    color: #333;
+}
+.social-icon {
+    line-height: 50px;
+}
+.social-follow {
+    margin-bottom: 10px;
+    font-weight:bold;
+    color: rgb(255, 255, 255);
+}
+.social-title {
+    margin-top: 10px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+}
+/* 
+=============================
+Media Social Style
+=============================
+*/
+@media all and (max-width:840px) {
+    .social-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-item {
+        width: 100%;
+    }
+}
+/* 
+=============================
+Drop Style
+=============================
+*/
+.drop {
+    padding: 50px;
+}
+.drop-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 45px;
+    color: #333;
+}
+.drop-title span {
+    font-weight: normal;
+}
+
+.drop-form {
+    width: 80%;
+    margin: auto;
+}
+input[type=text], input[type=email], input[type=submit], textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+input[type=text], input[type=email], input[type=submit] {
+    height: 30px;
+}
+textarea {
+    background: #ddd;
+}
+input[type=submit] {
+    width: 60%;
+    margin: auto;
+    border: 1px solid #333;
+    background: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    color: #bbb;
+}
+.drop-form-info {
+    display: flex;
+    justify-content: space-between;
+}
+input[name=info] {
+    flex-basis: 48%;
+}
+/* 
+=============================
+Media Drop Style
+=============================
+*/
+@media all and (max-width:500px) {
+    .drop-form-info {
+        flex-direction: column;
+        height: 80px;
+    }
+}
+/* 
+=============================
+Footet Style
+=============================
+*/
+.footer-text{
+    text-align: center;
+    color: #bbb;
+}
+
+
